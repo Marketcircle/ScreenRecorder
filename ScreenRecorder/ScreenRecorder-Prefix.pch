@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ScreenRecorder' target in the 'ScreenRecorder' project
+//
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+#endif
