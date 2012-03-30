@@ -14,6 +14,7 @@
 		AF1C44E115257F24009AB77E /* MCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1C44E015257F24009AB77E /* MCAppDelegate.m */; };
 		AF1C44E415257F24009AB77E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1C44E215257F24009AB77E /* MainMenu.xib */; };
 		AF1C44EB15258015009AB77E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1C44EA15258015009AB77E /* AVFoundation.framework */; };
+		AF1C44F715261746009AB77E /* Howdoishotweb.icns in Resources */ = {isa = PBXBuildFile; fileRef = AF1C44F615261746009AB77E /* Howdoishotweb.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		AF1C44E015257F24009AB77E /* MCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCAppDelegate.m; sourceTree = "<group>"; };
 		AF1C44E315257F24009AB77E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		AF1C44EA15258015009AB77E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AF1C44F615261746009AB77E /* Howdoishotweb.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Howdoishotweb.icns; path = ../Howdoishotweb.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		AF1C44D415257F24009AB77E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF1C44F615261746009AB77E /* Howdoishotweb.icns */,
 				AF1C44D515257F24009AB77E /* ScreenRecorder-Info.plist */,
 				AF1C44D615257F24009AB77E /* InfoPlist.strings */,
 				AF1C44D915257F24009AB77E /* main.m */,
@@ -161,6 +164,7 @@
 				AF1C44D815257F24009AB77E /* InfoPlist.strings in Resources */,
 				AF1C44DE15257F24009AB77E /* Credits.rtf in Resources */,
 				AF1C44E415257F24009AB77E /* MainMenu.xib in Resources */,
+				AF1C44F715261746009AB77E /* Howdoishotweb.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
