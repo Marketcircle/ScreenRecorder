@@ -13,9 +13,12 @@
 
 @property (retain) MCScreenRecorder* recorder;
 @property (weak) IBOutlet NSMenuItem *toggleButton;
+@property (weak) IBOutlet NSMenuItem *menuSeparator;
+@property (weak) IBOutlet NSMenuItem *fileButton;
 
 - (IBAction)startRecording:(id)sender;
 - (IBAction)pauseRecording:(id)sender;
 - (IBAction)stopRecording:(id)sender;
+- (IBAction)showInFinder:(id)sender;
 
 @end

@@ -12,6 +12,8 @@
 
 @synthesize recorder;
 @synthesize toggleButton;
+@synthesize menuSeparator;
+@synthesize fileButton;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   self.recorder = [[MCScreenRecorder alloc] init];
@@ -19,6 +21,10 @@
 
 - (IBAction)startRecording:(id)sender {
   [self.recorder start];
+
+  [menuSeparator setHidden:NO];
+  [fileButton setTitle:[self.recorder.file lastPathComponent]];
+  [fileButton setHidden:NO];
 }
 
 - (IBAction)pauseRecording:(id)sender {
@@ -30,6 +36,10 @@
 
 - (IBAction)stopRecording:(id)sender {
   [self.recorder stop];
+}
+
+- (IBAction)showInFinder:(id)sender {
+  [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:[NSArray arrayWithObject:self.recorder.file]];
 }
 
 @end
