@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>Howdoishotweb.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>marketcircle.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.marketcircle.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
