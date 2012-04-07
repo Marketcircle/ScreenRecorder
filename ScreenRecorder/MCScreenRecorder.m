@@ -18,18 +18,17 @@
 
 - (id) init {
   self.session = [[AVCaptureSession alloc] init];
-  
-  self.input   = [[AVCaptureScreenInput alloc] 
-                      initWithDisplayID:CGMainDisplayID()];
-  
+  self.session.sessionPreset = AVCaptureSessionPreset1280x720;
+
+  self.input   = [[AVCaptureScreenInput alloc] initWithDisplayID:CGMainDisplayID()];
   self.input.capturesMouseClicks = YES;
+
+  self.output  = [[AVCaptureMovieFileOutput alloc] init];
+  [self.output setDelegate:self];
+
   [self.session addInput:self.input];
-  
-  self.output = [[AVCaptureMovieFileOutput alloc] init];
-  // @todo We may need to set a different compression preset
-  [self.output  setDelegate:self];
   [self.session addOutput:self.output];
-    
+
   return self;
 }
 
