@@ -19,8 +19,7 @@
 @property NSURL* file;
 
 - (BOOL) start;
-- (BOOL) pause;
-- (BOOL) resume;
+- (BOOL) pause; // Pause/Resume functionality
 - (BOOL) stop;
 
 #pragma mark AVCaptureFileOutputDelegate

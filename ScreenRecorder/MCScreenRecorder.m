@@ -55,12 +55,11 @@
 }
 
 - (BOOL) pause {
-  [self.session stopRunning];
-  return YES;
-}
+  if (self.output.recordingPaused)
+    [self.output resumeRecording];
+  else
+    [self.output pauseRecording];
 
-- (BOOL) resume {
-  [self.session startRunning];
   return YES;
 }
 

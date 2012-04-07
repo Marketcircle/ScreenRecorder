@@ -21,10 +21,7 @@
 }
 
 - (IBAction)pauseRecording:(id)sender {
-  if ([self.recorder.session isRunning])
-    [self.recorder pause];
-  else
-    [self.recorder resume];
+  [self.recorder pause];
 }
 
 - (IBAction)stopRecording:(id)sender {
