@@ -9,18 +9,6 @@
 #import "MCScreenRecorder.h"
 
 
-static NSURL*
-recordingURL()
-{
-  NSString* dir  = [@"~/Movies/" stringByExpandingTildeInPath];
-  NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-  [formatter setDateFormat:@"YYYYMMDDHHmmss"];
-  NSString* date = [formatter stringFromDate:[NSDate date]];
-  NSString* file = [dir stringByAppendingPathComponent:[@"TestRecording-" stringByAppendingString:[date stringByAppendingString:@".mov"]]];
-  return [NSURL fileURLWithPath:file];
-}
-
-
 @implementation MCScreenRecorder
 
 @synthesize session;
@@ -46,8 +34,18 @@ recordingURL()
 }
 
 - (BOOL) start {
-  if (self.file == nil)
-    self.file = recordingURL();
+  static NSDateFormatter* formatter;
+  static NSURL*           homeDir;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYYMMDDHHmmss"];
+
+    homeDir = [NSURL fileURLWithPath:[@"~/Movies/" stringByExpandingTildeInPath]];
+  });
+
+  NSString* date = [formatter stringFromDate:[NSDate date]];
+  self.file      = [[homeDir URLByAppendingPathComponent:[@"TestRecording-" stringByAppendingString:date]] URLByAppendingPathExtension:@"mov"];
 
   [self.session startRunning];
   [self.output  startRecordingToOutputFileURL:self.file
