@@ -11,6 +11,7 @@
 @implementation MCAppDelegate
 
 @synthesize recorder;
+@synthesize toggleButton;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   self.recorder = [[MCScreenRecorder alloc] init];
@@ -21,7 +22,10 @@
 }
 
 - (IBAction)pauseRecording:(id)sender {
-  [self.recorder pause];
+  if ([self.recorder toggle])
+    [toggleButton setTitle:@"Pause"];
+  else
+    [toggleButton setTitle:@"Resume"];
 }
 
 - (IBAction)stopRecording:(id)sender {

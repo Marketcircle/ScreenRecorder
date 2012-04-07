@@ -12,6 +12,7 @@
 @interface MCAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (retain) MCScreenRecorder* recorder;
+@property (weak) IBOutlet NSMenuItem *toggleButton;
 
 - (IBAction)startRecording:(id)sender;
 - (IBAction)pauseRecording:(id)sender;

@@ -53,13 +53,14 @@
   return YES;
 }
 
-- (BOOL) pause {
-  if (self.output.recordingPaused)
+- (BOOL) toggle {
+  if (self.output.recordingPaused) {
     [self.output resumeRecording];
-  else
-    [self.output pauseRecording];
+    return YES;
+  }
 
-  return YES;
+  [self.output pauseRecording];
+  return NO;
 }
 
 - (BOOL) stop {

@@ -224,7 +224,7 @@
 								</object>
 								<object class="NSMenuItem" id="582657221">
 									<reference key="NSMenu" ref="709142993"/>
-									<string key="NSTitle">Pause/Resume</string>
+									<string key="NSTitle">Pause</string>
 									<string key="NSKeyEquiv">p</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -382,6 +382,14 @@
 						<reference key="destination" ref="768175067"/>
 					</object>
 					<int key="connectionID">555</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">toggleButton</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="582657221"/>
+					</object>
+					<int key="connectionID">557</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -641,7 +649,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">556</int>
+			<int key="maxID">557</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -667,6 +675,17 @@
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">toggleButton</string>
+						<string key="NS.object.0">NSMenuItem</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">toggleButton</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">toggleButton</string>
+							<string key="candidateClassName">NSMenuItem</string>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/MCAppDelegate.h</string>
