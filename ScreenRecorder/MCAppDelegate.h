@@ -7,8 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <AVFoundation/AVFoundation.h>
+#import "MCScreenRecorder.h"
 
 @interface MCAppDelegate : NSObject <NSApplicationDelegate>
+
+@property (retain) MCScreenRecorder* recorder;
+
+- (IBAction)startRecording:(id)sender;
+- (IBAction)pauseRecording:(id)sender;
+- (IBAction)stopRecording:(id)sender;
 
 @end

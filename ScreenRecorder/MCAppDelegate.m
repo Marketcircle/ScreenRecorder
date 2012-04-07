@@ -10,9 +10,22 @@
 
 @implementation MCAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-  // Insert code here to initialize your application
+@synthesize recorder;
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+  self.recorder = [[MCScreenRecorder alloc] init];
+}
+
+- (IBAction)startRecording:(id)sender {
+  [self.recorder start];
+}
+
+- (IBAction)pauseRecording:(id)sender {
+  [self.recorder pause];
+}
+
+- (IBAction)stopRecording:(id)sender {
+  [self.recorder stop];
 }
 
 @end
