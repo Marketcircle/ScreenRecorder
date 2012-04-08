@@ -23,7 +23,11 @@
   [self.recorder start];
 
   [menuSeparator setHidden:NO];
+
   [fileButton setTitle:[self.recorder.file lastPathComponent]];
+  // rdar://11207662 documentation claims to allow URLs, but only takes strings
+  [fileButton accessibilitySetOverrideValue:[self.recorder.file absoluteString]
+                               forAttribute:NSAccessibilityURLAttribute];
   [fileButton setHidden:NO];
 }
 
