@@ -8,17 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MCScreenRecorder.h"
+#import "MCScreenRecordingMenuItem.h"
 
 @interface MCAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (retain) MCScreenRecorder* recorder;
-@property (weak) IBOutlet NSMenuItem *toggleButton;
+@property (weak) IBOutlet NSMenu *recorderMenu;
+@property (weak) IBOutlet NSMenuItem *startStopButton;
+@property (weak) IBOutlet NSMenuItem *pauseUnpauseButton;
 @property (weak) IBOutlet NSMenuItem *menuSeparator;
-@property (weak) IBOutlet NSMenuItem *fileButton;
 
-- (IBAction)startRecording:(id)sender;
-- (IBAction)pauseRecording:(id)sender;
-- (IBAction)stopRecording:(id)sender;
-- (IBAction)showInFinder:(id)sender;
+- (IBAction)startStopRecording:(id)sender;
+- (IBAction)pauseUnpauseRecording:(id)sender;
 
 @end

@@ -15,6 +15,7 @@
 		AF1C44E415257F24009AB77E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1C44E215257F24009AB77E /* MainMenu.xib */; };
 		AF1C44EB15258015009AB77E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1C44EA15258015009AB77E /* AVFoundation.framework */; };
 		AF1C44F715261746009AB77E /* Howdoishotweb.icns in Resources */ = {isa = PBXBuildFile; fileRef = AF1C44F615261746009AB77E /* Howdoishotweb.icns */; };
+		AF32149C15324F3100AE2882 /* MCScreenRecordingMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32149B15324F3100AE2882 /* MCScreenRecordingMenuItem.m */; };
 		AF93FC9D1530AE17006A1253 /* MCScreenRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = AF93FC9C1530AE17006A1253 /* MCScreenRecorder.m */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 		AF1C44E315257F24009AB77E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		AF1C44EA15258015009AB77E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AF1C44F615261746009AB77E /* Howdoishotweb.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Howdoishotweb.icns; path = ../Howdoishotweb.icns; sourceTree = "<group>"; };
+		AF32149A15324F3100AE2882 /* MCScreenRecordingMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCScreenRecordingMenuItem.h; path = ../MCScreenRecordingMenuItem.h; sourceTree = "<group>"; };
+		AF32149B15324F3100AE2882 /* MCScreenRecordingMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCScreenRecordingMenuItem.m; path = ../MCScreenRecordingMenuItem.m; sourceTree = "<group>"; };
 		AF93FC9B1530AE17006A1253 /* MCScreenRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCScreenRecorder.h; sourceTree = "<group>"; };
 		AF93FC9C1530AE17006A1253 /* MCScreenRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCScreenRecorder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +94,8 @@
 		AF1C44D315257F24009AB77E /* ScreenRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				AF32149A15324F3100AE2882 /* MCScreenRecordingMenuItem.h */,
+				AF32149B15324F3100AE2882 /* MCScreenRecordingMenuItem.m */,
 				AF1C44DF15257F24009AB77E /* MCAppDelegate.h */,
 				AF1C44E015257F24009AB77E /* MCAppDelegate.m */,
 				AF93FC9B1530AE17006A1253 /* MCScreenRecorder.h */,
@@ -183,6 +188,7 @@
 				AF1C44DA15257F24009AB77E /* main.m in Sources */,
 				AF1C44E115257F24009AB77E /* MCAppDelegate.m in Sources */,
 				AF93FC9D1530AE17006A1253 /* MCScreenRecorder.m in Sources */,
+				AF32149C15324F3100AE2882 /* MCScreenRecordingMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -224,17 +224,9 @@
 								</object>
 								<object class="NSMenuItem" id="582657221">
 									<reference key="NSMenu" ref="709142993"/>
+									<bool key="NSIsDisabled">YES</bool>
 									<string key="NSTitle">Pause</string>
 									<string key="NSKeyEquiv">p</string>
-									<int key="NSKeyEquivModMask">1048576</int>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="35465992"/>
-									<reference key="NSMixedImage" ref="502551668"/>
-								</object>
-								<object class="NSMenuItem" id="768175067">
-									<reference key="NSMenu" ref="709142993"/>
-									<string key="NSTitle">Stop</string>
-									<string key="NSKeyEquiv">e</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
@@ -246,16 +238,6 @@
 									<bool key="NSIsSeparator">YES</bool>
 									<bool key="NSIsHidden">YES</bool>
 									<string key="NSTitle"/>
-									<string key="NSKeyEquiv"/>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="35465992"/>
-									<reference key="NSMixedImage" ref="502551668"/>
-								</object>
-								<object class="NSMenuItem" id="1001572132">
-									<reference key="NSMenu" ref="709142993"/>
-									<bool key="NSIsDisabled">YES</bool>
-									<bool key="NSIsHidden">YES</bool>
-									<string key="NSTitle">File</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
@@ -381,38 +363,6 @@
 					<int key="connectionID">367</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">startRecording:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="500275629"/>
-					</object>
-					<int key="connectionID">553</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">pauseRecording:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="582657221"/>
-					</object>
-					<int key="connectionID">554</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">stopRecording:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="768175067"/>
-					</object>
-					<int key="connectionID">555</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">toggleButton</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="582657221"/>
-					</object>
-					<int key="connectionID">557</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">menuSeparator</string>
 						<reference key="source" ref="976324537"/>
@@ -422,19 +372,43 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">fileButton</string>
+						<string key="label">recorderMenu</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="1001572132"/>
+						<reference key="destination" ref="709142993"/>
 					</object>
-					<int key="connectionID">561</int>
+					<int key="connectionID">564</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">startStopButton</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="500275629"/>
+					</object>
+					<int key="connectionID">565</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">pauseUnpauseButton</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="582657221"/>
+					</object>
+					<int key="connectionID">566</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">showInFinder:</string>
+						<string key="label">startStopRecording:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="1001572132"/>
+						<reference key="destination" ref="500275629"/>
 					</object>
-					<int key="connectionID">563</int>
+					<int key="connectionID">567</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">pauseUnpauseRecording:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="582657221"/>
+					</object>
+					<int key="connectionID">568</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -635,8 +609,6 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="582657221"/>
 							<reference ref="500275629"/>
-							<reference ref="768175067"/>
-							<reference ref="1001572132"/>
 							<reference ref="1060928425"/>
 						</array>
 						<reference key="parent" ref="669562089"/>
@@ -649,16 +621,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">551</int>
 						<reference key="object" ref="582657221"/>
-						<reference key="parent" ref="709142993"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">552</int>
-						<reference key="object" ref="768175067"/>
-						<reference key="parent" ref="709142993"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">558</int>
-						<reference key="object" ref="1001572132"/>
 						<reference key="parent" ref="709142993"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -691,8 +653,6 @@
 				<string key="549.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="550.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="551.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="552.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="558.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="559.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="57.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -708,7 +668,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">563</int>
+			<int key="maxID">568</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -716,45 +676,40 @@
 					<string key="className">MCAppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="pauseRecording:">id</string>
-						<string key="showInFinder:">id</string>
-						<string key="startRecording:">id</string>
-						<string key="stopRecording:">id</string>
+						<string key="pauseUnpauseRecording:">id</string>
+						<string key="startStopRecording:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="pauseRecording:">
-							<string key="name">pauseRecording:</string>
+						<object class="IBActionInfo" key="pauseUnpauseRecording:">
+							<string key="name">pauseUnpauseRecording:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="showInFinder:">
-							<string key="name">showInFinder:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="startRecording:">
-							<string key="name">startRecording:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="stopRecording:">
-							<string key="name">stopRecording:</string>
+						<object class="IBActionInfo" key="startStopRecording:">
+							<string key="name">startStopRecording:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="fileButton">NSMenuItem</string>
 						<string key="menuSeparator">NSMenuItem</string>
-						<string key="toggleButton">NSMenuItem</string>
+						<string key="pauseUnpauseButton">NSMenuItem</string>
+						<string key="recorderMenu">NSMenu</string>
+						<string key="startStopButton">NSMenuItem</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="fileButton">
-							<string key="name">fileButton</string>
-							<string key="candidateClassName">NSMenuItem</string>
-						</object>
 						<object class="IBToOneOutletInfo" key="menuSeparator">
 							<string key="name">menuSeparator</string>
 							<string key="candidateClassName">NSMenuItem</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="toggleButton">
-							<string key="name">toggleButton</string>
+						<object class="IBToOneOutletInfo" key="pauseUnpauseButton">
+							<string key="name">pauseUnpauseButton</string>
+							<string key="candidateClassName">NSMenuItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="recorderMenu">
+							<string key="name">recorderMenu</string>
+							<string key="candidateClassName">NSMenu</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="startStopButton">
+							<string key="name">startStopButton</string>
 							<string key="candidateClassName">NSMenuItem</string>
 						</object>
 					</dictionary>

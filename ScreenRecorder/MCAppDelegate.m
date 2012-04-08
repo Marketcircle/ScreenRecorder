@@ -11,39 +11,46 @@
 @implementation MCAppDelegate
 
 @synthesize recorder;
-@synthesize toggleButton;
+@synthesize recorderMenu;
+@synthesize startStopButton;
+@synthesize pauseUnpauseButton;
 @synthesize menuSeparator;
-@synthesize fileButton;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   self.recorder = [[MCScreenRecorder alloc] init];
+  [recorderMenu setAutoenablesItems:NO];
 }
 
-- (IBAction)startRecording:(id)sender {
-  [self.recorder start];
+- (IBAction)startStopRecording:(id)sender {
+  if (self.recorder.session.running) {
+    [self.recorder stop];
 
-  [menuSeparator setHidden:NO];
+    // Update UI
+    [startStopButton setTitle:@"Start"];
+    [pauseUnpauseButton setEnabled:NO];
 
-  [fileButton setTitle:[self.recorder.file lastPathComponent]];
-  // rdar://11207662 documentation claims to allow URLs, but only takes strings
-  [fileButton accessibilitySetOverrideValue:[self.recorder.file absoluteString]
-                               forAttribute:NSAccessibilityURLAttribute];
-  [fileButton setHidden:NO];
+  } else {
+    [self.recorder start];
+
+    // Update UI
+    [startStopButton setTitle:@"Stop"];
+    [pauseUnpauseButton setEnabled:YES];
+    [menuSeparator setHidden:NO];
+
+    // Add a menu item for the new recording
+    [recorderMenu addItem:[[MCScreenRecordingMenuItem alloc] 
+                           initWithFile:self.recorder.file]];
+  }
+
+  // We always want to reset the title
+  [pauseUnpauseButton setTitle:@"Pause"];
 }
 
-- (IBAction)pauseRecording:(id)sender {
+- (IBAction)pauseUnpauseRecording:(id)sender {
   if ([self.recorder toggle])
-    [toggleButton setTitle:@"Pause"];
+    [pauseUnpauseButton setTitle:@"Pause"];
   else
-    [toggleButton setTitle:@"Resume"];
-}
-
-- (IBAction)stopRecording:(id)sender {
-  [self.recorder stop];
-}
-
-- (IBAction)showInFinder:(id)sender {
-  [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:[NSArray arrayWithObject:self.recorder.file]];
+    [pauseUnpauseButton setTitle:@"Resume"];
 }
 
 @end
