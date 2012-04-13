@@ -18,7 +18,7 @@
 
 - (id) init {
   self.session = [[AVCaptureSession alloc] init];
-  self.session.sessionPreset = AVCaptureSessionPreset1280x720;
+  //  self.session.sessionPreset = AVCaptureSessionPreset1280x720;
 
   self.input   = [[AVCaptureScreenInput alloc] initWithDisplayID:CGMainDisplayID()];
   self.input.capturesMouseClicks = YES;
